@@ -70,3 +70,4 @@ npx wrangler pages deploy dist --project-name=soran-barbier
 - [ ] Social-Media-Links aktualisieren (Instagram, Facebook)
 - [ ] Öffnungszeiten und Preisliste pflegen
 - [ ] SEO: Schema.org LocalBusiness JSON-LD ergänzen
+# Deployment-Trigger
