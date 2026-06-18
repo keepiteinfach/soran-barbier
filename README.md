@@ -1,79 +1,72 @@
-# SORAN Barbier – Website
+# SORAN Barber Shop – Dessau
 
-Moderne Website für den lokalen Barbier-Shop **SORAN** in Dessau-Roßlau.
+Moderne Website für den SORAN Barber Shop in Dessau, gebaut mit Astro, Tailwind CSS und deployed auf Cloudflare Pages.
 
-## 🚀 Tech Stack
+## Tech Stack
 
-- [Astro](https://astro.build/) – schnelles, statisches Site-Rendering
-- [Tailwind CSS](https://tailwindcss.com/) – Utility-First CSS
-- [Cloudflare Pages](https://pages.cloudflare.com/) – Hosting & Deployment
-- [Wrangler](https://developers.cloudflare.com/workers/wrangler/) – CLI für Cloudflare
+- [Astro](https://astro.build/) – Statischer Site Generator
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS Framework
+- [Cloudflare Pages](https://pages.cloudflare.com/) – Hosting & CDN
 
-## 📁 Projektstruktur
+## Projektstruktur
 
 ```
-/
-├── public/              # Statische Assets (Bilder, Favicon)
 ├── src/
 │   ├── components/      # Wiederverwendbare Astro-Komponenten
 │   │   ├── Header.astro
-│   │   └── Footer.astro
-│   ├── layouts/         # Seiten-Layouts
+│   │   ├── Footer.astro
+│   ├── layouts/         # Seitenlayouts
 │   │   └── Layout.astro
-│   ├── pages/           # Astro-Seiten (Routing)
+│   ├── pages/           # Routen (jede .astro-Datei = eine Route)
 │   │   ├── index.astro
 │   │   ├── impressum.astro
 │   │   └── datenschutz.astro
-│   ├── styles/
-│   │   └── global.css   # Tailwind + Custom Styles
-│   └── config.ts        # Site-Konfiguration
-├── astro.config.mjs     # Astro-Konfiguration
-├── tailwind.config.mjs  # Tailwind-Farben & Animationen
-└── wrangler.jsonc       # Cloudflare-Deployment-Konfig
+│   └── styles/          # Globale Styles
+│       └── global.css
+├── public/              # Statische Assets (Bilder, Favicon)
+├── .github/workflows/   # GitHub Actions
+│   └── deploy.yml       # Automatisches Deployment zu Cloudflare Pages
+├── astro.config.mjs
+├── tailwind.config.mjs
+├── wrangler.jsonc
+└── package.json
 ```
 
-## 🛠️ Entwicklung
+## Lokale Entwicklung
 
 ```bash
-# Dependencies installieren
 npm install
-
-# Dev-Server starten
 npm run dev
-
-# Produktions-Build
-npm run build
-
-# Preview lokal mit Wrangler
-npm run preview
 ```
 
-## 🌐 Deployment
+Die Entwicklungsumgebung startet unter `http://localhost:4321`.
 
-### Automatisch via GitHub + Cloudflare Pages
-
-1. Repo auf GitHub pushen
-2. In [Cloudflare Dashboard](https://dash.cloudflare.com/) → Pages → "Create a project"
-3. GitHub-Account verbinden und Repo auswählen
-4. Build-Einstellungen:
-   - **Build command:** `npm run build`
-   - **Build output:** `dist`
-
-### Manuell via Wrangler CLI
+## Build
 
 ```bash
-npm run deploy
+npm run build
 ```
 
-## 📝 Anpassungen
+Das Ergebnis landet im `dist/`-Ordner.
 
-| Datei | Zweck |
-|-------|-------|
-| `src/config.ts` | Seiten-Titel, Beschreibung, URL |
-| `tailwind.config.mjs` | Farben, Fonts, Animationen |
-| `src/pages/index.astro` | Hauptseite mit allen Sektionen |
-| `src/styles/global.css` | Globale Styles & Button-Klassen |
+## Deployment
 
-## 📄 Lizenz
+Das Projekt wird automatisch bei jedem Push auf `main` über GitHub Actions zu Cloudflare Pages deployed.
 
-Privat – SORAN Barbier Dessau.
+### Manuelles Deployment
+
+Falls nötig:
+
+```bash
+npx wrangler pages deploy dist --project-name=soran-barbier
+```
+
+## Was noch fehlt / nächste Schritte
+
+- [ ] Echte Adresse, Telefonnummer und E-Mail eintragen (`impressum.astro`, `datenschutz.astro`, `Footer.astro`)
+- [ ] echte Bilder für den Shop einbauen (Hero, Team, Gallery)
+- [ ] Google Maps-Embed in die Kontakt-Section einfügen
+- [ ] Online-Terminbuchung verlinken (z. B. Treatwell, Square)
+- [ ] Social-Media-Links aktualisieren (Instagram, Facebook)
+- [ ] Öffnungszeiten und Preisliste pflegen
+- [ ] SEO: Schema.org LocalBusiness JSON-LD ergänzen
