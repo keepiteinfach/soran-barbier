@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1a1a1a;
+  --color-gold: #c9a962;
+  --color-gold-light: #ddb96d;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  body {
+    @apply antialiased overflow-x-hidden bg-soran-dark text-gray-100;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-soran;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-soran-gold rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-soran-gold-light;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-3 rounded-full border border-soran-gold/30 bg-soran-gold px-7 py-3.5 text-sm font-black text-soran-dark shadow-[0_18px_45px_rgba(201,169,98,0.3)] transition-all duration-300 hover:-translate-y-1 hover:bg-soran-gold-light hover:shadow-[0_24px_55px_rgba(201,169,98,0.45)] sm:px-10 sm:py-4 sm:text-base md:text-lg;
+  }
+
+  .btn-primary-sm {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-soran-gold/30 bg-soran-gold px-6 py-2.5 text-sm font-black text-soran-dark shadow-[0_10px_24px_rgba(201,169,98,0.25)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-soran-gold-light hover:shadow-[0_14px_30px_rgba(201,169,98,0.35)];
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-3 rounded-full border-2 border-soran-gold/50 px-7 py-3.5 text-sm font-bold text-soran-gold transition-all duration-300 hover:bg-soran-gold/10 hover:border-soran-gold sm:px-10 sm:py-4 sm:text-base;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-soran-gold to-soran-gold-light;
+  }
+
+  .bg-pattern {
+    background-image: radial-gradient(circle at 1px 1px, rgba(201, 169, 98, 0.08) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+}
