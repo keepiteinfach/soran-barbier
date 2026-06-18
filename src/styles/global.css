@@ -14,6 +14,54 @@
     font-family: 'Inter', system-ui, sans-serif;
   }
 
+  html[lang="ar"] body {
+    font-family: 'Cairo', 'Inter', system-ui, sans-serif;
+    direction: rtl;
+  }
+
+  html[lang="ar"] .reveal-left {
+    transform: translateX(40px);
+  }
+
+  html[lang="ar"] .reveal-right {
+    transform: translateX(-40px);
+  }
+
+  html[lang="ar"] .reveal-left.revealed,
+  html[lang="ar"] .reveal-right.revealed {
+    transform: translate(0, 0) !important;
+  }
+
+  html[lang="ar"] .flex-row {
+    flex-direction: row-reverse;
+  }
+
+  html[lang="ar"] .sm\:flex-row {
+    flex-direction: row-reverse;
+  }
+
+  html[lang="ar"] .lg\:text-left {
+    text-align: right;
+  }
+
+  html[lang="ar"] .text-center.lg\:text-left {
+    text-align: center;
+  }
+
+  html[lang="ar"] .lg\:text-left {
+    text-align: right !important;
+  }
+
+  html[lang="ar"] .left-1\/2 {
+    right: 50%;
+    left: auto;
+    transform: translate(50%, -50%);
+  }
+
+  html[lang="ar"] .-translate-x-1\/2 {
+    transform: translate(50%, 0);
+  }
+
   body {
     @apply antialiased overflow-x-hidden bg-soran-dark text-gray-100;
   }

@@ -19,69 +19,175 @@ const isHome = pathname === "/" || pathname === "";
             <span id="navbar-location" class:list={[
               "text-xs font-medium transition-colors duration-300",
               isHome ? "text-gray-300" : "text-gray-400"
-            ]}>Barbier · Dessau</span>
+            ]}>
+              <span data-lang="de">Barbier · Dessau</span>
+              <span data-lang="ar" class="hidden" dir="rtl">صالون حلاقة · ديساو</span>
+            </span>
           </div>
         </a>
       </div>
 
       <!-- Desktop Menu -->
-      <div class="hidden lg:block">
+      <div class="hidden lg:flex items-center gap-2">
         <div class="desktop-nav flex items-baseline space-x-1">
           <a href="/" class:list={[
             "px-4 py-2 rounded-full text-sm font-bold transition-all",
             isHome ? "text-white hover:text-soran-gold" : "text-gray-300 hover:text-soran-gold hover:bg-soran-gold/10"
-          ]}>Start</a>
+          ]}>
+            <span data-lang="de">Start</span>
+            <span data-lang="ar" class="hidden" dir="rtl">الرئيسية</span>
+          </a>
           <a href="/#leistungen" class:list={[
             "px-4 py-2 rounded-full text-sm font-bold transition-all",
             isHome ? "text-white hover:text-soran-gold" : "text-gray-300 hover:text-soran-gold hover:bg-soran-gold/10"
-          ]}>Leistungen</a>
+          ]}>
+            <span data-lang="de">Leistungen</span>
+            <span data-lang="ar" class="hidden" dir="rtl">الخدمات</span>
+          </a>
           <a href="/#ueber-uns" class:list={[
             "px-4 py-2 rounded-full text-sm font-bold transition-all",
             isHome ? "text-white hover:text-soran-gold" : "text-gray-300 hover:text-soran-gold hover:bg-soran-gold/10"
-          ]}>Über uns</a>
+          ]}>
+            <span data-lang="de">Über uns</span>
+            <span data-lang="ar" class="hidden" dir="rtl">عنّا</span>
+          </a>
           <a href="/#galerie" class:list={[
             "px-4 py-2 rounded-full text-sm font-bold transition-all",
             isHome ? "text-white hover:text-soran-gold" : "text-gray-300 hover:text-soran-gold hover:bg-soran-gold/10"
-          ]}>Galerie</a>
+          ]}>
+            <span data-lang="de">Galerie</span>
+            <span data-lang="ar" class="hidden" dir="rtl">معرض الصور</span>
+          </a>
           <a href="/#kontakt" class="btn-primary-sm">
-            Termin buchen
+            <span data-lang="de">Termin buchen</span>
+            <span data-lang="ar" class="hidden" dir="rtl">احجز موعداً</span>
           </a>
         </div>
+
+        <!-- Language Toggle -->
+        <button 
+          id="lang-toggle"
+          class="ml-3 flex items-center gap-1.5 rounded-full border border-soran-gold/30 bg-soran-gold/10 px-3 py-1.5 text-xs font-bold text-soran-gold transition-all hover:bg-soran-gold/20"
+          aria-label="Sprache wechseln"
+        >
+          <span id="lang-icon" class="text-base">🇩🇪</span>
+          <span id="lang-label">DE</span>
+        </button>
       </div>
 
-      <button
-        id="mobile-menu-toggle"
-        class:list={[
-          "lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors",
-          isHome ? "border-white/25 bg-black/20 text-white backdrop-blur-sm" : "border-soran-gold/20 bg-soran text-gray-100 shadow-sm"
-        ]}
-        type="button"
-        aria-controls="mobile-menu"
-        aria-expanded="false"
-        aria-label="Navigation öffnen"
-      >
-        <svg id="mobile-menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
-        </svg>
-        <svg id="mobile-menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+      <div class="flex items-center gap-2 lg:hidden">
+        <!-- Mobile Language Toggle -->
+        <button 
+          id="lang-toggle-mobile"
+          class="flex items-center gap-1.5 rounded-full border border-soran-gold/30 bg-soran-gold/10 px-3 py-1.5 text-xs font-bold text-soran-gold transition-all hover:bg-soran-gold/20"
+          aria-label="Sprache wechseln"
+        >
+          <span id="lang-icon-mobile" class="text-base">🇩🇪</span>
+          <span id="lang-label-mobile">DE</span>
+        </button>
+
+        <button
+          id="mobile-menu-toggle"
+          class:list={[
+            "inline-flex h-11 w-11 items-center justify-center rounded-full border transition-colors",
+            isHome ? "border-white/25 bg-black/20 text-white backdrop-blur-sm" : "border-soran-gold/20 bg-soran text-gray-100 shadow-sm"
+          ]}
+          type="button"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          aria-label="Navigation öffnen"
+        >
+          <svg id="mobile-menu-open-icon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+          <svg id="mobile-menu-close-icon" xmlns="http://www.w3.org/2000/svg" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
   <div id="mobile-menu" class="hidden lg:hidden border-t border-soran-gold/10 bg-soran shadow-xl">
     <div class="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4">
-      <a href="/" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">Start</a>
-      <a href="/#leistungen" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">Leistungen</a>
-      <a href="/#ueber-uns" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">Über uns</a>
-      <a href="/#galerie" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">Galerie</a>
-      <a href="/#kontakt" class="btn-primary-sm mt-2 w-full">Termin buchen</a>
+      <a href="/" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">
+        <span data-lang="de">Start</span>
+        <span data-lang="ar" class="hidden" dir="rtl">الرئيسية</span>
+      </a>
+      <a href="/#leistungen" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">
+        <span data-lang="de">Leistungen</span>
+        <span data-lang="ar" class="hidden" dir="rtl">الخدمات</span>
+      </a>
+      <a href="/#ueber-uns" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">
+        <span data-lang="de">Über uns</span>
+        <span data-lang="ar" class="hidden" dir="rtl">عنّا</span>
+      </a>
+      <a href="/#galerie" class="rounded-xl px-4 py-3 text-sm font-black text-gray-100 hover:bg-soran-gold/10 hover:text-soran-gold">
+        <span data-lang="de">Galerie</span>
+        <span data-lang="ar" class="hidden" dir="rtl">معرض الصور</span>
+      </a>
+      <a href="/#kontakt" class="btn-primary-sm mt-2 w-full">
+        <span data-lang="de">Termin buchen</span>
+        <span data-lang="ar" class="hidden" dir="rtl">احجز موعداً</span>
+      </a>
     </div>
   </div>
 </nav>
 
 <script>
+  // Language Switcher
+  function setLanguage(lang) {
+    const html = document.documentElement;
+    const body = document.getElementById('app-body');
+    const isAr = lang === 'ar';
+
+    // Set HTML lang and dir
+    html.lang = lang;
+    html.dir = isAr ? 'rtl' : 'ltr';
+
+    // Toggle all data-lang elements
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      if (el.getAttribute('data-lang') === lang) {
+        el.classList.remove('hidden');
+      } else {
+        el.classList.add('hidden');
+      }
+    });
+
+    // Update toggle buttons
+    const icon = isAr ? '🇸🇾' : '🇩🇪';
+    const label = isAr ? 'AR' : 'DE';
+
+    const iconEl = document.getElementById('lang-icon');
+    const labelEl = document.getElementById('lang-label');
+    const iconMob = document.getElementById('lang-icon-mobile');
+    const labelMob = document.getElementById('lang-label-mobile');
+
+    if (iconEl) iconEl.textContent = icon;
+    if (labelEl) labelEl.textContent = label;
+    if (iconMob) iconMob.textContent = icon;
+    if (labelMob) labelMob.textContent = label;
+
+    // Store preference
+    localStorage.setItem('soran-lang', lang);
+  }
+
+  // Initialize language
+  const savedLang = localStorage.getItem('soran-lang') || 'de';
+  setLanguage(savedLang);
+
+  // Toggle buttons
+  document.getElementById('lang-toggle')?.addEventListener('click', () => {
+    const current = document.documentElement.lang;
+    setLanguage(current === 'de' ? 'ar' : 'de');
+  });
+
+  document.getElementById('lang-toggle-mobile')?.addEventListener('click', () => {
+    const current = document.documentElement.lang;
+    setLanguage(current === 'de' ? 'ar' : 'de');
+  });
+
+  // Mobile menu
   const navbar = document.getElementById('navbar');
   const navbarLocation = document.getElementById('navbar-location');
   const mobileMenu = document.getElementById('mobile-menu');

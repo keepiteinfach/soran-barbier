@@ -3,63 +3,86 @@ import Layout from "../layouts/Layout.astro";
 
 const services = [
   {
-    title: "Herrenhaarschnitt",
-    description: "Präziser Schnitt nach aktuellen Trends oder klassischem Stil – ganz nach deinen Wünschen. Inklusive Waschen und Styling.",
+    titleDe: "Herrenhaarschnitt",
+    titleAr: "قص الشعر للرجال",
+    descDe: "Präziser Schnitt nach aktuellen Trends oder klassischem Stil – ganz nach deinen Wünschen. Inklusive Waschen und Styling.",
+    descAr: "قص دقيق يتبع أحدث الصيحات أو الأسلوب الكلاسيكي – حسب رغبتك. يشمل الغسيل والتصفيف.",
     price: "ab 25 €",
-    duration: "ca. 45 Min.",
+    durationDe: "ca. 45 Min.",
+    durationAr: "حوالي 45 دقيقة",
     icon: "M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z"
   },
   {
-    title: "Bartschnitt & Pflege",
-    description: "Formgebung und Pflege deines Bartes mit heißem Handtuch, Ölen und perfektem Kontur-Finish.",
+    titleDe: "Bartschnitt & Pflege",
+    titleAr: "قص وتصفيف اللحية",
+    descDe: "Formgebung und Pflege deines Bartes mit heißem Handtuch, Ölen und perfektem Kontur-Finish.",
+    descAr: "تشكيل وعناية بلحيتك بالمنشفة الساخنة والزيوت واللمسة النهائية المثالية.",
     price: "ab 18 €",
-    duration: "ca. 30 Min.",
+    durationDe: "ca. 30 Min.",
+    durationAr: "حوالي 30 دقيقة",
     icon: "M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
   },
   {
-    title: "Klassische Rasur",
-    description: "Die traditionelle Nassrasur mit Rasiermesser, heißem Handtuch und hochwertigen Pflegeprodukten.",
+    titleDe: "Klassische Rasur",
+    titleAr: "الحلاقة الكلاسيكية",
+    descDe: "Die traditionelle Nassrasur mit Rasiermesser, heißem Handtuch und hochwertigen Pflegeprodukten.",
+    descAr: "الحلاقة التقليدية بالشفرة والمنشفة الساخنة ومنتجات العناية الفاخرة.",
     price: "ab 22 €",
-    duration: "ca. 35 Min.",
+    durationDe: "ca. 35 Min.",
+    durationAr: "حوالي 35 دقيقة",
     icon: "M13 10V3L4 14h7v7l9-11h-7z"
   },
   {
-    title: "Premium-Paket",
-    description: "Das Komplettpaket: Haarschnitt, Bartschnitt und klassische Rasur – für den Mann, der das Beste verdient.",
+    titleDe: "Premium-Paket",
+    titleAr: "الباقة المميزة",
+    descDe: "Das Komplettpaket: Haarschnitt, Bartschnitt und klassische Rasur – für den Mann, der das Beste verdient.",
+    descAr: "الباقة الشاملة: قص الشعر وتصفيف اللحية والحلاقة الكلاسيكية – للرجل الذي يستحق الأفضل.",
     price: "ab 55 €",
-    duration: "ca. 90 Min.",
+    durationDe: "ca. 90 Min.",
+    durationAr: "حوالي 90 دقيقة",
     icon: "M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
   },
   {
-    title: "Kopfmassage",
-    description: "Entspannende Massage mit ätherischen Ölen – die perfekte Ergänzung zu jedem Schnitt.",
+    titleDe: "Kopfmassage",
+    titleAr: "تدليك الرأس",
+    descDe: "Entspannende Massage mit ätherischen Ölen – die perfekte Ergänzung zu jedem Schnitt.",
+    descAr: "تدليك مريح بالزيوت العطرية – الإضافة المثالية لكل قصة شعر.",
     price: "ab 12 €",
-    duration: "ca. 15 Min.",
+    durationDe: "ca. 15 Min.",
+    durationAr: "حوالي 15 دقيقة",
     icon: "M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
   },
   {
-    title: "Seniorenschnitt",
-    description: "Gepflegter Kurzhaarschnitt für unsere erfahrenen Herren – mit Ruhe, Geduld und Respekt.",
+    titleDe: "Seniorenschnitt",
+    titleAr: "قص الشعر للكبار",
+    descDe: "Gepflegter Kurzhaarschnitt für unsere erfahrenen Herren – mit Ruhe, Geduld und Respekt.",
+    descAr: "قصة شعر أنيقة لسادتنا الأكبر سنًا – بهدوء وصبر واحترام.",
     price: "ab 20 €",
-    duration: "ca. 40 Min.",
+    durationDe: "ca. 40 Min.",
+    durationAr: "حوالي 40 دقيقة",
     icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
   }
 ];
 
 const galleryImages = [
-  { alt: "Barbier bei der Arbeit", color: "bg-soran-light" },
-  { alt: "Haarschnitt Detail", color: "bg-soran" },
-  { alt: "Bartpflege", color: "bg-soran-light" },
-  { alt: "Klassische Rasur", color: "bg-soran" },
-  { alt: "Shop Ambiente", color: "bg-soran-light" },
-  { alt: "Premium-Service", color: "bg-soran" }
+  { altDe: "Barbier bei der Arbeit", altAr: "الحلاق أثناء العمل", color: "bg-soran-light" },
+  { altDe: "Haarschnitt Detail", altAr: "تفاصيل قص الشعر", color: "bg-soran" },
+  { altDe: "Bartpflege", altAr: "عناية اللحية", color: "bg-soran-light" },
+  { altDe: "Klassische Rasur", altAr: "الحلاقة الكلاسيكية", color: "bg-soran" },
+  { altDe: "Shop Ambiente", altAr: "أجواء الصالون", color: "bg-soran-light" },
+  { altDe: "Premium-Service", altAr: "خدمة مميزة", color: "bg-soran" }
+];
+
+const testimonials = [
+  { name: "Markus K.", textDe: "Endlich ein Barbier, der versteht, was ich will. Der Fade ist perfekt und die Atmosphäre im Laden ist erstklassig.", textAr: "أخيرًا حلاق يفهم ما أريد. الفيد مثالي وأجواء المحل رائعة.", stars: 5 },
+  { name: "Thomas W.", textDe: "Die klassische Rasur ist ein Erlebnis. Heißes Handtuch, gutes Gespräch und ein Baby-glatter Ansatz – besser geht's nicht.", textAr: "الحلاقة الكلاسيكية تجربة رائعة. المنشفة الساخنة، الحديث الممتع، والنتيجة ناعمة كالحرير – لا يمكن أن يكون أفضل.", stars: 5 },
+  { name: "David S.", textDe: "Mein Bart hat noch nie so gut ausgesehen. Soran nimmt sich Zeit und berät ehrlich. Seitdem fahre ich extra aus Roßlau nach Dessau.", textAr: "لم تبدو لحيتي بهذا الجمال من قبل. سوران يأخذ وقته وينصح بصدق. منذ ذلك الحين أقطع الطريق من روسلو إلى ديساو.", stars: 5 }
 ];
 ---
 
 <Layout>
   <!-- Hero Section -->
   <section id="home" class="relative min-h-[100svh] w-full flex items-center justify-center overflow-hidden">
-    <!-- Background Image -->
     <div class="absolute inset-0 z-0">
       <img 
         src="/images/hero-barber.jpg" 
@@ -71,7 +94,6 @@ const galleryImages = [
       <div class="absolute inset-0 bg-gradient-to-b from-soran-dark/60 via-soran-dark/40 to-soran-dark"></div>
     </div>
 
-    <!-- Decorative Pattern -->
     <div class="absolute inset-0 bg-pattern opacity-30 z-10 pointer-events-none"></div>
 
     <div class="relative z-20 text-center px-4 max-w-6xl">
@@ -83,30 +105,37 @@ const galleryImages = [
 
       <div class="reveal-up delay-100">
         <span class="inline-block border border-soran-gold/30 text-soran-gold text-xs md:text-sm font-bold px-4 py-2 rounded-full uppercase tracking-[0.2em] backdrop-blur-sm bg-black/20">
-          Traditionelle Barbierkunst
+          <span data-lang="de">Traditionelle Barbierkunst</span>
+          <span data-lang="ar" class="hidden" dir="rtl">فن الحلاقة التقليدي</span>
         </span>
       </div>
 
       <h1 class="reveal-up delay-200 text-[2.5rem] sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.05] tracking-tight mt-4">
         SORAN<br />
-        <span class="text-gradient">Barbier</span>
+        <span class="text-gradient">
+          <span data-lang="de">Barbier</span>
+          <span data-lang="ar" class="hidden" dir="rtl">صالون الحلاقة</span>
+        </span>
       </h1>
 
       <p class="reveal-up delay-300 text-sm sm:text-base md:text-xl text-gray-300 mb-10 sm:mb-12 max-w-2xl mx-auto font-light leading-relaxed">
-        Präzise Schnitte, gepflegte Bärte und die klassische Rasur – mit Stil und Leidenschaft in Dessau-Roßlau.
+        <span data-lang="de">Präzise Schnitte, gepflegte Bärte und die klassische Rasur – mit Stil und Leidenschaft in Dessau-Roßlau.</span>
+        <span data-lang="ar" class="hidden" dir="rtl">قصات دقيقة، لحى مهذبة، وحلاقة كلاسيكية – بأسلوب وشغف في ديساو-روسلاو.</span>
       </p>
 
       <div class="reveal-up delay-400 flex flex-col sm:flex-row justify-center items-center gap-4">
         <a href="#kontakt" class="btn-primary">
-          <span>Jetzt Termin buchen</span>
+          <span data-lang="de">Jetzt Termin buchen</span>
+          <span data-lang="ar" class="hidden" dir="rtl">احجز موعدك الآن</span>
         </a>
         <a href="#leistungen" class="btn-outline">
-          Unsere Leistungen
+          <span data-lang="de">Unsere Leistungen</span>
+          <span data-lang="ar" class="hidden" dir="rtl">خدماتنا</span>
         </a>
       </div>
     </div>
 
-    <a href="#leistungen" class="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 text-soran-gold/80 hover:text-soran-gold transition-colors animate-bounce" aria-label="Zu den Leistungen scrollen">
+    <a href="#leistungen" class="absolute bottom-5 sm:bottom-8 left-1/2 -translate-x-1/2 z-20 text-soran-gold/80 hover:text-soran-gold transition-colors animate-bounce" aria-label="Scroll down">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
     </a>
   </section>
@@ -116,28 +145,42 @@ const galleryImages = [
     <div class="absolute inset-0 bg-pattern opacity-30"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-10 md:mb-16">
-        <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">Was wir anbieten</span>
+        <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+          <span data-lang="de">Was wir anbieten</span>
+          <span data-lang="ar" class="hidden" dir="rtl">ما نقدمه</span>
+        </span>
         <h2 class="reveal-up delay-100 text-2xl sm:text-4xl md:text-6xl font-black text-white mb-4 tracking-tight leading-tight">
-          Unsere <span class="text-gradient">Leistungen</span>
+          <span data-lang="de">Unsere <span class="text-gradient">Leistungen</span></span>
+          <span data-lang="ar" class="hidden" dir="rtl"><span class="text-gradient">خدماتنا</span></span>
         </h2>
         <p class="reveal-up delay-200 text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
-          Von der klassischen Rasur bis zum modernen Fade – bei SORAN bekommst du die Pflege, die du verdienst.
+          <span data-lang="de">Von der klassischen Rasur bis zum modernen Fade – bei SORAN bekommst du die Pflege, die du verdienst.</span>
+          <span data-lang="ar" class="hidden" dir="rtl">من الحلاقة الكلاسيكية إلى الفيد العصري – في سوران تحصل على العناية التي تستحقها.</span>
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         {services.map((service, i) => (
-          <article class={`reveal-up group bg-soran-light/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-soran-gold/10 hover:border-soran-gold/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(201,169,98,0.1)]`} style={`animation-delay: ${i * 100}ms`}>
+          <article class="reveal-up group bg-soran-light/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-soran-gold/10 hover:border-soran-gold/30 transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(201,169,98,0.1)]">
             <div class="w-14 h-14 rounded-xl bg-soran-gold/10 flex items-center justify-center mb-5 group-hover:bg-soran-gold/20 transition-colors">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-soran-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={service.icon} />
               </svg>
             </div>
-            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white group-hover:text-soran-gold transition-colors">{service.title}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed mb-4">{service.description}</p>
+            <h3 class="text-lg sm:text-xl font-bold mb-2 text-white group-hover:text-soran-gold transition-colors">
+              <span data-lang="de">{service.titleDe}</span>
+              <span data-lang="ar" class="hidden" dir="rtl">{service.titleAr}</span>
+            </h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">
+              <span data-lang="de">{service.descDe}</span>
+              <span data-lang="ar" class="hidden" dir="rtl">{service.descAr}</span>
+            </p>
             <div class="flex items-center justify-between pt-4 border-t border-soran-gold/10">
               <span class="text-soran-gold font-black text-lg">{service.price}</span>
-              <span class="text-gray-500 text-sm">{service.duration}</span>
+              <span class="text-gray-500 text-sm">
+                <span data-lang="de">{service.durationDe}</span>
+                <span data-lang="ar" class="hidden" dir="rtl">{service.durationAr}</span>
+              </span>
             </div>
           </article>
         ))}
@@ -163,39 +206,58 @@ const galleryImages = [
           <div class="absolute -bottom-8 -right-8 w-64 h-64 bg-soran-gold/10 rounded-full blur-3xl -z-0"></div>
           <div class="reveal-up absolute -bottom-6 -left-6 bg-soran-light border border-soran-gold/20 p-6 rounded-2xl shadow-2xl z-20 hidden md:block" style="animation-delay: 300ms">
             <p class="text-4xl font-black text-soran-gold">10+</p>
-            <p class="text-gray-400 font-bold uppercase text-xs tracking-wider mt-1">Jahre Erfahrung</p>
+            <p class="text-gray-400 font-bold uppercase text-xs tracking-wider mt-1">
+              <span data-lang="de">Jahre Erfahrung</span>
+              <span data-lang="ar" class="hidden" dir="rtl">سنوات خبرة</span>
+            </p>
           </div>
         </div>
 
         <div class="text-center lg:text-left">
-          <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">Unsere Geschichte</span>
+          <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+            <span data-lang="de">Unsere Geschichte</span>
+            <span data-lang="ar" class="hidden" dir="rtl">قصتنا</span>
+          </span>
           <h2 class="reveal-up delay-100 text-2xl sm:text-4xl md:text-5xl font-black text-white mb-6 md:mb-8 tracking-tight leading-tight">
-            Wo <span class="text-gradient">Tradition</span><br/>auf Stil trifft
+            <span data-lang="de">Wo <span class="text-gradient">Tradition</span><br/>auf Stil trifft</span>
+            <span data-lang="ar" class="hidden" dir="rtl">حيث تلتقي <span class="text-gradient">التقاليد</span><br/>بالأسلوب</span>
           </h2>
           <div class="space-y-5 md:space-y-6 text-gray-400 text-sm sm:text-base md:text-lg leading-relaxed">
             <p class="reveal-up delay-200">
-              SORAN steht für traditionelle Barbierkunst mit modernem Anspruch. In unserem Laden in Dessau vereinen wir die alten Techniken der klassischen Barbierkunst mit aktuellen Trends.
+              <span data-lang="de">SORAN steht für traditionelle Barbierkunst mit modernem Anspruch. In unserem Laden in Dessau vereinen wir die alten Techniken der klassischen Barbierkunst mit aktuellen Trends.</span>
+              <span data-lang="ar" class="hidden" dir="rtl">سوران يمثل فن الحلاقة التقليدي بمعايير عصرية. في صالوننا بديساو نجمع بين تقنيات الحلاقة الكلاسيكية القديمة والصيحات الحديثة.</span>
             </p>
             <p class="reveal-up delay-300">
-              Jeder Schnitt ist ein Kunstwerk – egal ob klassischer Gentleman-Style, scharfer Fade oder gepflegter Vollbart. Wir nehmen uns Zeit für dich und deinen Look.
+              <span data-lang="de">Jeder Schnitt ist ein Kunstwerk – egal ob klassischer Gentleman-Style, scharfer Fade oder gepflegter Vollbart. Wir nehmen uns Zeit für dich und deinen Look.</span>
+              <span data-lang="ar" class="hidden" dir="rtl">كل قصة هي تحفة فنية – سواء كان الأسلوب الكلاسيكي الأنيق، الفيد الحاد، أو اللحية الكاملة المهذبة. نأخذ وقتاً لك ولإطلالتك.</span>
             </p>
             <p class="reveal-up delay-400">
-              Bei uns geht es nicht nur um Haare. Es geht um das Erlebnis, die Atmosphäre und das Gefühl, als Mann perfekt gepflegt zu sein.
+              <span data-lang="de">Bei uns geht es nicht nur um Haare. Es geht um das Erlebnis, die Atmosphäre und das Gefühl, als Mann perfekt gepflegt zu sein.</span>
+              <span data-lang="ar" class="hidden" dir="rtl">ليس الأمر يتعلق بالشعر فحسب. بل يتعلق بالتجربة، والأجواء، والشعور بأنك رجل مهذب بشكل كامل.</span>
             </p>
           </div>
 
           <div class="mt-8 md:mt-10 grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6">
             <div class="reveal-up delay-200 bg-soran-light/50 p-5 rounded-2xl border border-soran-gold/10 text-center">
               <p class="font-black text-2xl text-soran-gold">1000+</p>
-              <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Zufriedene Kunden</p>
+              <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">
+                <span data-lang="de">Zufriedene Kunden</span>
+                <span data-lang="ar" class="hidden" dir="rtl">عميل راضٍ</span>
+              </p>
             </div>
             <div class="reveal-up delay-300 bg-soran-light/50 p-5 rounded-2xl border border-soran-gold/10 text-center">
               <p class="font-black text-2xl text-soran-gold">10+</p>
-              <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Jahre Erfahrung</p>
+              <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">
+                <span data-lang="de">Jahre Erfahrung</span>
+                <span data-lang="ar" class="hidden" dir="rtl">سنوات خبرة</span>
+              </p>
             </div>
             <div class="reveal-up delay-400 bg-soran-light/50 p-5 rounded-2xl border border-soran-gold/10 text-center col-span-2 sm:col-span-1">
               <p class="font-black text-2xl text-soran-gold">★★★★★</p>
-              <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">Google Bewertung</p>
+              <p class="text-gray-400 text-xs uppercase tracking-wider mt-1">
+                <span data-lang="de">Google Bewertung</span>
+                <span data-lang="ar" class="hidden" dir="rtl">تقييم جوجل</span>
+              </p>
             </div>
           </div>
         </div>
@@ -208,12 +270,17 @@ const galleryImages = [
     <div class="absolute inset-0 bg-pattern opacity-30"></div>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-10 md:mb-16">
-        <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">Einblicke</span>
+        <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+          <span data-lang="de">Einblicke</span>
+          <span data-lang="ar" class="hidden" dir="rtl">لمحات</span>
+        </span>
         <h2 class="reveal-up delay-100 text-2xl sm:text-4xl md:text-6xl font-black text-white mb-4 tracking-tight leading-tight">
-          Unsere <span class="text-gradient">Galerie</span>
+          <span data-lang="de">Unsere <span class="text-gradient">Galerie</span></span>
+          <span data-lang="ar" class="hidden" dir="rtl"><span class="text-gradient">معرضنا</span></span>
         </h2>
         <p class="reveal-up delay-200 text-gray-400 max-w-2xl mx-auto text-sm sm:text-base md:text-lg leading-relaxed">
-          Eindrücke aus unserem Shop – Atmosphäre, Details und die Kunst des Barbierens.
+          <span data-lang="de">Eindrücke aus unserem Shop – Atmosphäre, Details und die Kunst des Barbierens.</span>
+          <span data-lang="ar" class="hidden" dir="rtl">انطباعات من صالوننا – الأجواء، التفاصيل، وفن الحلاقة.</span>
         </p>
       </div>
 
@@ -229,7 +296,10 @@ const galleryImages = [
               </svg>
             </div>
             <div class="absolute inset-0 bg-gradient-to-t from-soran-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 md:p-6">
-              <span class="text-white font-bold text-sm md:text-base">{img.alt}</span>
+              <span class="text-white font-bold text-sm md:text-base">
+                <span data-lang="de">{img.altDe}</span>
+                <span data-lang="ar" class="hidden" dir="rtl">{img.altAr}</span>
+              </span>
             </div>
           </div>
         ))}
@@ -243,19 +313,19 @@ const galleryImages = [
     
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
       <div class="text-center mb-10 md:mb-16">
-        <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">Das sagen unsere Kunden</span>
+        <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+          <span data-lang="de">Das sagen unsere Kunden</span>
+          <span data-lang="ar" class="hidden" dir="rtl">ماذا يقول عملاؤنا</span>
+        </span>
         <h2 class="reveal-up delay-100 text-2xl sm:text-4xl md:text-5xl font-black text-white tracking-tight leading-tight">
-          <span class="text-gradient">Bewertungen</span>
+          <span data-lang="de"><span class="text-gradient">Bewertungen</span></span>
+          <span data-lang="ar" class="hidden" dir="rtl"><span class="text-gradient">التقييمات</span></span>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        {[
-          { name: "Markus K.", text: "Endlich ein Barbier, der versteht, was ich will. Der Fade ist perfekt und die Atmosphäre im Laden ist erstklassig.", stars: 5 },
-          { name: "Thomas W.", text: "Die klassische Rasur ist ein Erlebnis. Heißes Handtuch, gutes Gespräch und ein Baby-glatter Ansatz – besser geht's nicht.", stars: 5 },
-          { name: "David S.", text: "Mein Bart hat noch nie so gut ausgesehen. Soran nimmt sich Zeit und berät ehrlich. Seitdem fahre ich extra aus Roßlau nach Dessau.", stars: 5 }
-        ].map((review, i) => (
-          <div class={`reveal-up bg-soran-light/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-soran-gold/10 hover:border-soran-gold/20 transition-all duration-300 hover:-translate-y-1`} style={`animation-delay: ${i * 150}ms`}>
+        {testimonials.map((review, i) => (
+          <div class="reveal-up bg-soran-light/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-soran-gold/10 hover:border-soran-gold/20 transition-all duration-300 hover:-translate-y-1">
             <div class="flex gap-1 mb-4">
               {Array.from({ length: review.stars }).map(() => (
                 <svg class="w-5 h-5 text-soran-gold" fill="currentColor" viewBox="0 0 20 20">
@@ -263,7 +333,10 @@ const galleryImages = [
                 </svg>
               ))}
             </div>
-            <p class="text-gray-300 text-sm leading-relaxed mb-4">"{review.text}"</p>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+              <span data-lang="de">"{review.textDe}"</span>
+              <span data-lang="ar" class="hidden" dir="rtl">"{review.textAr}"</span>
+            </p>
             <p class="text-soran-gold font-bold text-sm">{review.name}</p>
           </div>
         ))}
@@ -277,14 +350,17 @@ const galleryImages = [
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-soran-gold/5 rounded-full blur-3xl"></div>
     <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
       <h2 class="reveal-up text-2xl sm:text-4xl md:text-5xl font-black text-white mb-6 md:mb-8 tracking-tight">
-        Bereit für einen <span class="text-gradient">neuen Look?</span>
+        <span data-lang="de">Bereit für einen <span class="text-gradient">neuen Look?</span></span>
+        <span data-lang="ar" class="hidden" dir="rtl">مستعد لـ<span class="text-gradient">إطلالة جديدة؟</span></span>
       </h2>
       <p class="reveal-up delay-100 text-gray-400 text-sm sm:text-base md:text-xl mb-8 md:mb-12 max-w-2xl mx-auto font-medium leading-relaxed">
-        Buche jetzt deinen Termin und erlebe die traditionelle Barbierkunst in Dessau.
+        <span data-lang="de">Buche jetzt deinen Termin und erlebe die traditionelle Barbierkunst in Dessau.</span>
+        <span data-lang="ar" class="hidden" dir="rtl">احجز موعدك الآن واختبر فن الحلاقة التقليدي في ديساو.</span>
       </p>
       <div class="reveal-up delay-200">
         <a href="#kontakt" class="btn-primary inline-flex">
-          Termin vereinbaren
+          <span data-lang="de">Termin vereinbaren</span>
+          <span data-lang="ar" class="hidden" dir="rtl">احجز موعداً</span>
         </a>
       </div>
     </div>
@@ -295,10 +371,17 @@ const galleryImages = [
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
         <div class="text-center lg:text-left">
-          <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">Kontakt</span>
-          <h2 class="reveal-up delay-100 text-2xl sm:text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">Besuch uns in Dessau</h2>
+          <span class="reveal-up text-soran-gold text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+            <span data-lang="de">Kontakt</span>
+            <span data-lang="ar" class="hidden" dir="rtl">اتصل بنا</span>
+          </span>
+          <h2 class="reveal-up delay-100 text-2xl sm:text-4xl md:text-5xl font-black text-white mb-6 tracking-tight">
+            <span data-lang="de">Besuch uns in Dessau</span>
+            <span data-lang="ar" class="hidden" dir="rtl">زُرنا في ديساو</span>
+          </h2>
           <p class="reveal-up delay-200 text-gray-400 text-sm sm:text-base md:text-lg mb-8 md:mb-12 leading-relaxed">
-            Reserviere deinen Termin oder schau einfach vorbei. Wir freuen uns auf dich!
+            <span data-lang="de">Reserviere deinen Termin oder schau einfach vorbei. Wir freuen uns auf dich!</span>
+            <span data-lang="ar" class="hidden" dir="rtl">احجز موعدك أو تفضل بزيارتنا. نتطلع لرؤيتك!</span>
           </p>
 
           <div class="space-y-6 sm:space-y-8">
@@ -307,7 +390,10 @@ const galleryImages = [
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-soran-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               </div>
               <div>
-                <p class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-1">Adresse</p>
+                <p class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-1">
+                  <span data-lang="de">Adresse</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">العنوان</span>
+                </p>
                 <p class="text-base sm:text-xl font-bold text-white">Zerbster Straße 12</p>
                 <p class="text-gray-400 text-sm">06844 Dessau-Roßlau</p>
               </div>
@@ -318,7 +404,10 @@ const galleryImages = [
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-soran-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
               </div>
               <div>
-                <p class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-1">Telefon</p>
+                <p class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-1">
+                  <span data-lang="de">Telefon</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">الهاتف</span>
+                </p>
                 <p class="text-base sm:text-xl font-bold text-white">0340 - 12345678</p>
               </div>
             </div>
@@ -328,9 +417,18 @@ const galleryImages = [
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-soran-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
               </div>
               <div>
-                <p class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-1">Öffnungszeiten</p>
-                <p class="text-base sm:text-xl font-bold text-white">Mo–Fr: 09:00 – 18:00</p>
-                <p class="text-gray-400 text-sm">Sa: 09:00 – 14:00</p>
+                <p class="text-gray-500 font-bold uppercase text-xs tracking-widest mb-1">
+                  <span data-lang="de">Öffnungszeiten</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">ساعات العمل</span>
+                </p>
+                <p class="text-base sm:text-xl font-bold text-white">
+                  <span data-lang="de">Mo–Fr: 09:00 – 18:00</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">الإثنين-الجمعة: 09:00 – 18:00</span>
+                </p>
+                <p class="text-gray-400 text-sm">
+                  <span data-lang="de">Sa: 09:00 – 14:00</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">السبت: 09:00 – 14:00</span>
+                </p>
               </div>
             </div>
           </div>
@@ -338,39 +436,70 @@ const galleryImages = [
 
         <!-- Contact Form -->
         <div class="reveal-right bg-soran-light/50 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 border border-soran-gold/10">
-          <h3 class="text-xl sm:text-2xl font-black text-white mb-6">Termin anfragen</h3>
+          <h3 class="text-xl sm:text-2xl font-black text-white mb-6">
+            <span data-lang="de">Termin anfragen</span>
+            <span data-lang="ar" class="hidden" dir="rtl">طلب موعد</span>
+          </h3>
           <form class="space-y-4" action="#" method="POST">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
-                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Name</label>
+                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                  <span data-lang="de">Name</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">الاسم</span>
+                </label>
                 <input type="text" id="name" name="name" required class="w-full bg-soran-dark border border-soran-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-soran-gold/50 focus:ring-1 focus:ring-soran-gold/50 transition-colors" placeholder="Max Mustermann" />
               </div>
               <div>
-                <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Telefon</label>
+                <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                  <span data-lang="de">Telefon</span>
+                  <span data-lang="ar" class="hidden" dir="rtl">الهاتف</span>
+                </label>
                 <input type="tel" id="phone" name="phone" class="w-full bg-soran-dark border border-soran-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-soran-gold/50 focus:ring-1 focus:ring-soran-gold/50 transition-colors" placeholder="0176 / ..." />
               </div>
             </div>
             <div>
-              <label for="email" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">E-Mail</label>
+              <label for="email" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                <span data-lang="de">E-Mail</span>
+                <span data-lang="ar" class="hidden" dir="rtl">البريد الإلكتروني</span>
+              </label>
               <input type="email" id="email" name="email" required class="w-full bg-soran-dark border border-soran-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-soran-gold/50 focus:ring-1 focus:ring-soran-gold/50 transition-colors" placeholder="max@beispiel.de" />
             </div>
             <div>
-              <label for="service" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Leistung</label>
+              <label for="service" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                <span data-lang="de">Leistung</span>
+                <span data-lang="ar" class="hidden" dir="rtl">الخدمة</span>
+              </label>
               <select id="service" name="service" class="w-full bg-soran-dark border border-soran-gold/20 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-soran-gold/50 focus:ring-1 focus:ring-soran-gold/50 transition-colors">
-                <option value="">Leistung wählen...</option>
-                <option value="haarschnitt">Herrenhaarschnitt</option>
-                <option value="bart">Bartschnitt & Pflege</option>
-                <option value="rasur">Klassische Rasur</option>
-                <option value="premium">Premium-Paket</option>
-                <option value="kopfmassage">Kopfmassage</option>
+                <option value="">
+                  <span data-lang="de">Leistung wählen...</span>
+                </option>
+                <option value="haarschnitt">
+                  <span data-lang="de">Herrenhaarschnitt</span>
+                </option>
+                <option value="bart">
+                  <span data-lang="de">Bartschnitt & Pflege</span>
+                </option>
+                <option value="rasur">
+                  <span data-lang="de">Klassische Rasur</span>
+                </option>
+                <option value="premium">
+                  <span data-lang="de">Premium-Paket</span>
+                </option>
+                <option value="kopfmassage">
+                  <span data-lang="de">Kopfmassage</span>
+                </option>
               </select>
             </div>
             <div>
-              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">Nachricht (optional)</label>
+              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-gray-400 mb-2">
+                <span data-lang="de">Nachricht (optional)</span>
+                <span data-lang="ar" class="hidden" dir="rtl">الرسالة (اختياري)</span>
+              </label>
               <textarea id="message" name="message" rows="3" class="w-full bg-soran-dark border border-soran-gold/20 rounded-xl px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-soran-gold/50 focus:ring-1 focus:ring-soran-gold/50 transition-colors resize-none" placeholder="Wunschtermin, besondere Wünsche..."></textarea>
             </div>
             <button type="submit" class="btn-primary w-full justify-center">
-              Anfrage senden
+              <span data-lang="de">Anfrage senden</span>
+              <span data-lang="ar" class="hidden" dir="rtl">إرسال الطلب</span>
             </button>
           </form>
         </div>
@@ -409,7 +538,6 @@ const galleryImages = [
 </script>
 
 <style>
-  /* Scroll Reveal Base States */
   .reveal-up, .reveal-left, .reveal-right {
     opacity: 0;
     transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -427,13 +555,11 @@ const galleryImages = [
     transform: translateX(40px);
   }
 
-  /* Revealed State */
   .revealed {
     opacity: 1;
     transform: translate(0, 0) !important;
   }
 
-  /* Staggered Delays */
   .delay-100 { transition-delay: 100ms; }
   .delay-200 { transition-delay: 200ms; }
   .delay-300 { transition-delay: 300ms; }
