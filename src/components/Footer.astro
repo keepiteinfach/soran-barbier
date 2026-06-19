@@ -1,4 +1,6 @@
 ---
+import LogoMark from "./LogoMark.astro";
+
 const currentYear = new Date().getFullYear();
 ---
 
@@ -9,9 +11,7 @@ const currentYear = new Date().getFullYear();
       <!-- Logo & Beschreibung -->
       <div>
         <div class="flex items-center gap-3 mb-6">
-          <div class="h-12 w-12 rounded-full bg-soran-gold flex items-center justify-center">
-            <span class="text-soran-dark font-black text-xl">S</span>
-          </div>
+          <LogoMark class="h-12 w-12 flex-shrink-0" />
           <div>
             <span class="text-soran-gold font-black text-lg uppercase tracking-wider block">SORAN</span>
             <span class="text-gray-400 text-sm">Barbier · Dessau</span>

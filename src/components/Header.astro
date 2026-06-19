@@ -1,4 +1,6 @@
 ---
+import LogoMark from "./LogoMark.astro";
+
 const pathname = Astro.url.pathname;
 const isHome = pathname === "/" || pathname === "";
 ---
@@ -11,9 +13,7 @@ const isHome = pathname === "/" || pathname === "";
     <div class="flex justify-between h-20 items-center">
       <div class="flex-shrink-0 flex items-center">
         <a href="/" class="flex items-center gap-3 group">
-          <div class="h-10 w-10 rounded-full bg-soran-gold flex items-center justify-center">
-            <span class="text-soran-dark font-black text-lg">S</span>
-          </div>
+          <LogoMark class="h-10 w-10 flex-shrink-0" />
           <div>
             <span class="text-soran-gold font-black text-lg uppercase tracking-wider block leading-none">SORAN</span>
             <span id="navbar-location" class:list={[

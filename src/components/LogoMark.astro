@@ -1,0 +1,38 @@
+---
+interface Props {
+  class?: string;
+  title?: string;
+}
+
+const { class: className = "", title = "SORAN Barbier Logo" } = Astro.props;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 100 100"
+  role="img"
+  aria-label={title}
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle cx="50" cy="50" r="49" fill="#1a1a1a" />
+  <circle cx="50" cy="50" r="43" fill="none" stroke="#c9a962" stroke-width="3" />
+  <circle cx="50" cy="50" r="35" fill="#0f0f0f" stroke="#c9a962" stroke-width="1.5" opacity="0.9" />
+
+  <g fill="none" stroke="#c9a962" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M38 60L72 24" stroke-width="6" />
+    <path d="M62 60L28 24" stroke-width="6" />
+    <path d="M43 56L34 66" stroke-width="5" />
+    <path d="M57 56L66 66" stroke-width="5" />
+    <circle cx="31" cy="70" r="9" stroke-width="5" />
+    <circle cx="69" cy="70" r="9" stroke-width="5" />
+  </g>
+
+  <circle cx="50" cy="52" r="4.5" fill="#ddb96d" />
+  <path
+    d="M31 83H69"
+    fill="none"
+    stroke="#ddb96d"
+    stroke-width="3"
+    stroke-linecap="round"
+  />
+</svg>

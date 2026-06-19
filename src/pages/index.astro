@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import LogoMark from "../components/LogoMark.astro";
 
 export const prerender = true;
 
@@ -100,9 +101,7 @@ const testimonials = [
 
     <div class="relative z-20 text-center px-4 max-w-6xl">
       <div class="reveal-up">
-        <div class="h-20 w-20 rounded-full bg-soran-gold flex items-center justify-center mx-auto mb-6 shadow-[0_0_40px_rgba(201,169,98,0.3)]">
-          <span class="text-soran-dark font-black text-4xl">S</span>
-        </div>
+        <LogoMark class="h-20 w-20 mx-auto mb-6 drop-shadow-[0_0_40px_rgba(201,169,98,0.3)]" />
       </div>
 
       <div class="reveal-up delay-100">
