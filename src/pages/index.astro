@@ -68,12 +68,12 @@ const services = [
 ];
 
 const galleryImages = [
-  { altDe: "Barbier bei der Arbeit", altAr: "الحلاق أثناء العمل", color: "bg-soran-light" },
-  { altDe: "Haarschnitt Detail", altAr: "تفاصيل قص الشعر", color: "bg-soran" },
-  { altDe: "Bartpflege", altAr: "عناية اللحية", color: "bg-soran-light" },
-  { altDe: "Klassische Rasur", altAr: "الحلاقة الكلاسيكية", color: "bg-soran" },
-  { altDe: "Shop Ambiente", altAr: "أجواء الصالون", color: "bg-soran-light" },
-  { altDe: "Premium-Service", altAr: "خدمة مميزة", color: "bg-soran" }
+  { altDe: "Barbier bei der Arbeit", altAr: "الحلاق أثناء العمل", position: "object-center" },
+  { altDe: "Haarschnitt Detail", altAr: "تفاصيل قص الشعر", position: "object-top" },
+  { altDe: "Bartpflege", altAr: "عناية اللحية", position: "object-[62%_45%]" },
+  { altDe: "Klassische Rasur", altAr: "الحلاقة الكلاسيكية", position: "object-[42%_55%]" },
+  { altDe: "Shop Ambiente", altAr: "أجواء الصالون", position: "object-[75%_45%]" },
+  { altDe: "Premium-Service", altAr: "خدمة مميزة", position: "object-bottom" }
 ];
 
 const testimonials = [
@@ -288,15 +288,16 @@ const testimonials = [
       <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
         {galleryImages.map((img, i) => (
           <div class:list={[
-            "reveal-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer",
-            i === 0 || i === 3 ? "md:col-span-2 md:row-span-2" : ""
+            "reveal-up relative aspect-square rounded-2xl overflow-hidden group cursor-pointer border border-soran-gold/10 bg-soran-light",
+            i === 0 ? "md:col-span-2 md:row-span-2" : ""
           ]}>
-            <div class:list={["w-full h-full flex items-center justify-center transition-transform duration-700 group-hover:scale-110", img.color]}>
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-soran-gold/30" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-soran-dark/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-4 md:p-6">
+            <img
+              src="/images/hero-barber.jpg"
+              alt=""
+              loading="lazy"
+              class:list={["w-full h-full object-cover transition-transform duration-700 group-hover:scale-110", img.position]}
+            />
+            <div class="absolute inset-0 bg-gradient-to-t from-soran-dark/85 via-soran-dark/20 to-transparent flex items-end p-4 md:p-6">
               <span class="text-white font-bold text-sm md:text-base">
                 <span data-lang="de">{img.altDe}</span>
                 <span data-lang="ar" class="hidden" dir="rtl">{img.altAr}</span>
