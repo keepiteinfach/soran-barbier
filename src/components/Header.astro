@@ -67,11 +67,12 @@ const isHome = pathname === "/" || pathname === "";
         <!-- Language Toggle -->
         <button 
           id="lang-toggle"
+          type="button"
           class="ml-3 flex items-center gap-1.5 rounded-full border border-soran-gold/30 bg-soran-gold/10 px-3 py-1.5 text-xs font-bold text-soran-gold transition-all hover:bg-soran-gold/20"
           aria-label="Sprache wechseln"
         >
-          <span id="lang-icon" class="text-base">🇩🇪</span>
-          <span id="lang-label">DE</span>
+          <span id="lang-icon" class="text-base">🇸🇾</span>
+          <span id="lang-label">عربي</span>
         </button>
       </div>
 
@@ -79,11 +80,12 @@ const isHome = pathname === "/" || pathname === "";
         <!-- Mobile Language Toggle -->
         <button 
           id="lang-toggle-mobile"
+          type="button"
           class="flex items-center gap-1.5 rounded-full border border-soran-gold/30 bg-soran-gold/10 px-3 py-1.5 text-xs font-bold text-soran-gold transition-all hover:bg-soran-gold/20"
           aria-label="Sprache wechseln"
         >
-          <span id="lang-icon-mobile" class="text-base">🇩🇪</span>
-          <span id="lang-label-mobile">DE</span>
+          <span id="lang-icon-mobile" class="text-base">🇸🇾</span>
+          <span id="lang-label-mobile">عربي</span>
         </button>
 
         <button
@@ -154,9 +156,9 @@ const isHome = pathname === "/" || pathname === "";
       }
     });
 
-    // Update toggle buttons
-    const icon = isAr ? '🇸🇾' : '🇩🇪';
-    const label = isAr ? 'AR' : 'DE';
+    // Update toggle buttons – show the language you can switch TO (reversed flag)
+    const icon = isAr ? '🇩🇪' : '🇸🇾';
+    const label = isAr ? 'DE' : 'عربي';
 
     const iconEl = document.getElementById('lang-icon');
     const labelEl = document.getElementById('lang-label');
@@ -176,13 +178,15 @@ const isHome = pathname === "/" || pathname === "";
   const savedLang = localStorage.getItem('soran-lang') || 'de';
   setLanguage(savedLang);
 
-  // Toggle buttons
-  document.getElementById('lang-toggle')?.addEventListener('click', () => {
+  // Toggle buttons (prevent any default action / page jump)
+  document.getElementById('lang-toggle')?.addEventListener('click', (e) => {
+    e.preventDefault();
     const current = document.documentElement.lang;
     setLanguage(current === 'de' ? 'ar' : 'de');
   });
 
-  document.getElementById('lang-toggle-mobile')?.addEventListener('click', () => {
+  document.getElementById('lang-toggle-mobile')?.addEventListener('click', (e) => {
+    e.preventDefault();
     const current = document.documentElement.lang;
     setLanguage(current === 'de' ? 'ar' : 'de');
   });
