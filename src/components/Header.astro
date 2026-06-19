@@ -174,9 +174,11 @@ const isHome = pathname === "/" || pathname === "";
     localStorage.setItem('soran-lang', lang);
   }
 
-  // Initialize language
-  const savedLang = localStorage.getItem('soran-lang') || 'de';
-  setLanguage(savedLang);
+  // Initialize language – only override default if user has explicitly chosen before
+  const savedLang = localStorage.getItem('soran-lang');
+  if (savedLang) {
+    setLanguage(savedLang);
+  }
 
   // Toggle buttons (prevent any default action / page jump)
   document.getElementById('lang-toggle')?.addEventListener('click', (e) => {
