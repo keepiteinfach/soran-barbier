@@ -170,12 +170,12 @@ const isHome = pathname === "/" || pathname === "";
     if (iconMob) iconMob.textContent = icon;
     if (labelMob) labelMob.textContent = label;
 
-    // Store preference
-    localStorage.setItem('soran-lang', lang);
+    // Store preference (use new key so old stored values don't override our new default)
+    localStorage.setItem('soran-lang-v2', lang);
   }
 
   // Initialize language – only override default if user has explicitly chosen before
-  const savedLang = localStorage.getItem('soran-lang');
+  const savedLang = localStorage.getItem('soran-lang-v2');
   if (savedLang) {
     setLanguage(savedLang);
   }
