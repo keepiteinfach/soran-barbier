@@ -140,12 +140,11 @@ const isHome = pathname === "/" || pathname === "";
   // Language Switcher
   function setLanguage(lang) {
     const html = document.documentElement;
-    const body = document.getElementById('app-body');
     const isAr = lang === 'ar';
 
-    // Set HTML lang and dir
+    // Keep the site chrome fixed in LTR; Arabic text nodes carry their own dir.
     html.lang = lang;
-    html.dir = isAr ? 'rtl' : 'ltr';
+    html.dir = 'ltr';
 
     // Toggle all data-lang elements
     document.querySelectorAll('[data-lang]').forEach(el => {
